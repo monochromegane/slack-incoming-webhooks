@@ -1,4 +1,4 @@
-# slack-incoming-webhooks
+# slack-incoming-webhooks [![Build Status](https://travis-ci.org/monochromegane/slack-incoming-webhooks.svg?branch=master)](https://travis-ci.org/monochromegane/slack-incoming-webhooks)
 
 A Slack Incoming Webhooks client in Go.
 
