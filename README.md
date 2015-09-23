@@ -50,13 +50,14 @@ func main() {
 		WebhookURL: YOUR_WEBHOOK_URL,
 	}.Post(&slack.Payload{
 		Text: "Text",
-        })
+	})
 }
 ```
 
 ## Support parameters
 
-**All** Incoming Webhooks and Attachments parameters is supported :beer:
+**All** Incoming Webhooks and Attachments parameters is supported :beer: !
+
 See Slack API doc.
 
 - [Incoming Webhooks](https://api.slack.com/incoming-webhooks)
@@ -67,7 +68,7 @@ See Slack API doc.
 
 ```sh
 $ go get github.com/monochromegane/slack-incoming-webhooks/...
-``` 
+```
 
 ## Contribution
 
