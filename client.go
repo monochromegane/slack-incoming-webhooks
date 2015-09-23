@@ -12,7 +12,7 @@ type Client struct {
 	WebhookURL string
 }
 
-func (c Client) Post(p Payload) error {
+func (c Client) Post(p *Payload) error {
 
 	json, err := json.Marshal(p)
 	if err != nil {
@@ -27,7 +27,7 @@ func (c Client) Post(p Payload) error {
 	if resp.StatusCode != http.StatusOK {
 		body, _ := ioutil.ReadAll(resp.Body)
 		defer resp.Body.Close()
-		return fmt.Errorf("%d: %s", resp.StatusCode, body)
+		return fmt.Errorf("status code: %d, response body: %s", resp.StatusCode, body)
 
 	}
 	return nil
