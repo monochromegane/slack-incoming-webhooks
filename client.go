@@ -28,7 +28,6 @@ func (c Client) Post(p *Payload) error {
 		body, _ := ioutil.ReadAll(resp.Body)
 		defer resp.Body.Close()
 		return fmt.Errorf("status code: %d, response body: %s", resp.StatusCode, body)
-
 	}
 	return nil
 }
