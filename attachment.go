@@ -13,6 +13,7 @@ type Attachment struct {
 	Fields     []*Field `json:"fields,omitempty"`
 	ImageURL   string   `json:"image_url,omitempty"`
 	ThumbURL   string   `json:"thumb_url,omitempty"`
+	MarkdownIn []string `json:"mrkdwn_in,omitempty"`
 }
 
 func (a Attachment) IsEmpty() bool {
@@ -27,7 +28,8 @@ func (a Attachment) IsEmpty() bool {
 		a.Text == "" &&
 		len(a.Fields) == 0 &&
 		a.ImageURL == "" &&
-		a.ThumbURL == ""
+		a.ThumbURL == "" &&
+		len(a.MarkdownIn) == 0
 }
 
 func (a *Attachment) AddField(f *Field) {
