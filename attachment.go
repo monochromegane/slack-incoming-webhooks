@@ -13,6 +13,7 @@ type Attachment struct {
 	Fields     []*Field `json:"fields,omitempty"`
 	ImageURL   string   `json:"image_url,omitempty"`
 	ThumbURL   string   `json:"thumb_url,omitempty"`
+	Timestamp  int64    `json:"ts,omitempty"`
 	MarkdownIn []string `json:"mrkdwn_in,omitempty"`
 }
 
