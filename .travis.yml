@@ -1,7 +1,8 @@
 language: go
 go:
-  - 1.5
-  - 1.4.2
+  - 1.12.x
+  - 1.11.x
   - tip
+env: GO111MODULE=on
 script:
   - go test -v ./...
